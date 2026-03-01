@@ -1,0 +1,480 @@
+2026-03-01 11:47:08 │ INFO     │ agent            │ ══════════ ЗАПУСК AI AGENT ══════════
+2026-03-01 11:47:08 │ INFO     │ agent            │ Python: 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]
+2026-03-01 11:47:08 │ INFO     │ agent            │ CWD: D:\VSCode\Project\AI AGENT\agent
+2026-03-01 11:47:08 │ INFO     │ agent            │ Лог-файл: D:\VSCode\Project\AI AGENT\agent\agent.log
+2026-03-01 11:47:08 │ INFO     │ agent            │ Уровень логирования: DEBUG
+2026-03-01 11:47:08 │ INFO     │ agent.core       │ Создание агента: модель=gpt-4o-mini
+2026-03-01 11:47:08 │ INFO     │ agent.core       │ LLM инициализирован: gpt-4o-mini, temperature=0.3
+2026-03-01 11:47:08 │ INFO     │ agent.core       │ Регистрация инструментов: get_weather, get_crypto_price, web_search, read_file, write_file, run_terminal_command, http_request
+2026-03-01 11:47:08 │ INFO     │ agent.core       │ Агент создан успешно (create_react_agent)
+2026-03-01 11:47:08 │ INFO     │ agent.core       │ Загрузка памяти из D:\VSCode\Project\AI AGENT\agent\memory.json
+2026-03-01 11:47:08 │ INFO     │ agent.core       │ Загружено 18 записей из памяти
+2026-03-01 11:47:08 │ INFO     │ agent            │ Загружено 18 сообщений из памяти
+2026-03-01 11:51:24 │ INFO     │ agent            │ Завершение по Ctrl+C / EOF
+2026-03-01 11:52:30 │ INFO     │ agent            │ ══════════ ЗАПУСК TELEGRAM BOT ══════════
+2026-03-01 11:52:30 │ INFO     │ agent.core       │ Создание агента: модель=gpt-4o-mini
+2026-03-01 11:52:31 │ INFO     │ agent.core       │ LLM инициализирован: gpt-4o-mini, temperature=0.3
+2026-03-01 11:52:31 │ INFO     │ agent.core       │ Регистрация инструментов: get_weather, get_crypto_price, web_search, read_file, write_file, run_terminal_command, http_request
+2026-03-01 11:52:31 │ INFO     │ agent.core       │ Агент создан успешно (create_react_agent)
+2026-03-01 11:52:31 │ INFO     │ agent            │ Telegram-бот инициализирован
+2026-03-01 11:52:31 │ INFO     │ agent            │ Запуск polling...
+2026-03-01 11:52:57 │ INFO     │ agent            │ /start от Xeniia_gruzdova (id=1004724739)
+2026-03-01 11:53:23 │ INFO     │ agent            │ Сообщение от Xeniia_gruzdova (id=1004724739): 'Курс биткоина к рублю?'
+2026-03-01 11:53:23 │ INFO     │ agent.core       │ Загрузка памяти из D:\VSCode\Project\AI AGENT\agent\user_memories\1004724739.json
+2026-03-01 11:53:23 │ INFO     │ agent.core       │ Файл памяти не найден, начинаем с пустой истории
+2026-03-01 11:53:23 │ INFO     │ agent            │ Загружена история для user_id=1004724739 (0 записей)
+2026-03-01 11:53:23 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 11:53:23 │ INFO     │ agent.core       │ НОВЫЙ ЗАПРОС: 'Курс биткоина к рублю?'
+2026-03-01 11:53:23 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 11:53:23 │ DEBUG    │ agent.core       │ Конвертировано 0 записей истории в messages
+2026-03-01 11:53:23 │ INFO     │ agent.core       │ История чата: 0 сообщений передано модели
+2026-03-01 11:53:23 │ INFO     │ agent.core       │ Отправка запроса в LLM...
+2026-03-01 11:53:36 │ INFO     │ agent.tools      │ ─── TOOL: get_crypto_price(coin='bitcoin', currency='rub') ───
+2026-03-01 11:53:37 │ DEBUG    │ agent.tools      │ CoinGecko HTTP 200
+2026-03-01 11:53:37 │ DEBUG    │ agent.tools      │ CoinGecko ответ: {"bitcoin": {"rub": 5146341}}
+2026-03-01 11:53:37 │ INFO     │ agent.tools      │ get_crypto_price → OK: bitcoin = 5146341 RUB
+2026-03-01 11:53:38 │ INFO     │ agent.core       │ Ответ получен, всего 4 сообщений в цепочке
+2026-03-01 11:53:38 │ DEBUG    │ agent.core       │   [0] HumanMessage
+2026-03-01 11:53:38 │ INFO     │ agent.core       │   [1] AIMessage → вызов инструмента: get_crypto_price({"coin": "bitcoin", "currency": "rub"})
+2026-03-01 11:53:38 │ INFO     │ agent.core       │   [2] ToolMessage (tool=get_crypto_price) → Курс bitcoin: 5146341 RUB
+2026-03-01 11:53:38 │ INFO     │ agent.core       │   [3] AIMessage → Курс биткоина к рублю составляет 5,146,341 RUB.
+2026-03-01 11:53:38 │ INFO     │ agent.core       │ Финальный ответ (47 символов): Курс биткоина к рублю составляет 5,146,341 RUB....
+2026-03-01 11:53:38 │ INFO     │ agent.core       │ Сохранение памяти: 2 записей → D:\VSCode\Project\AI AGENT\agent\memory.json
+2026-03-01 11:53:38 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 11:53:38 │ INFO     │ agent.core       │ Запрос обработан, история: 2 записей
+2026-03-01 11:53:38 │ INFO     │ agent.core       │ Сохранение памяти: 2 записей → D:\VSCode\Project\AI AGENT\agent\user_memories\1004724739.json
+2026-03-01 11:53:38 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 11:54:03 │ INFO     │ agent            │ Сообщение от Xeniia_gruzdova (id=1004724739): '5 vbkkbjyjd,'
+2026-03-01 11:54:04 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 11:54:04 │ INFO     │ agent.core       │ НОВЫЙ ЗАПРОС: '5 vbkkbjyjd,'
+2026-03-01 11:54:04 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 11:54:04 │ DEBUG    │ agent.core       │ Конвертировано 2 записей истории в messages
+2026-03-01 11:54:04 │ INFO     │ agent.core       │ История чата: 2 сообщений передано модели
+2026-03-01 11:54:04 │ INFO     │ agent.core       │ Отправка запроса в LLM...
+2026-03-01 11:54:06 │ INFO     │ agent.tools      │ ─── TOOL: get_crypto_price(coin='bitcoin', currency='rub') ───
+2026-03-01 11:54:07 │ DEBUG    │ agent.tools      │ CoinGecko HTTP 200
+2026-03-01 11:54:07 │ DEBUG    │ agent.tools      │ CoinGecko ответ: {"bitcoin": {"rub": 5141229}}
+2026-03-01 11:54:07 │ INFO     │ agent.tools      │ get_crypto_price → OK: bitcoin = 5141229 RUB
+2026-03-01 11:54:08 │ INFO     │ agent.core       │ Ответ получен, всего 6 сообщений в цепочке
+2026-03-01 11:54:08 │ DEBUG    │ agent.core       │   [0] HumanMessage
+2026-03-01 11:54:08 │ INFO     │ agent.core       │   [1] AIMessage → Курс биткоина к рублю составляет 5,146,341 RUB.
+2026-03-01 11:54:08 │ DEBUG    │ agent.core       │   [2] HumanMessage
+2026-03-01 11:54:08 │ INFO     │ agent.core       │   [3] AIMessage → вызов инструмента: get_crypto_price({"coin": "bitcoin", "currency": "rub"})
+2026-03-01 11:54:08 │ INFO     │ agent.core       │   [4] ToolMessage (tool=get_crypto_price) → Курс bitcoin: 5141229 RUB
+2026-03-01 11:54:08 │ INFO     │ agent.core       │   [5] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 RUB. Если у вас есть другие вопросы, не стесняйтесь спрашивать!
+2026-03-01 11:54:08 │ INFO     │ agent.core       │ Финальный ответ (116 символов): Курс биткоина (Bitcoin) к рублю составляет 5,141,229 RUB. Если у вас есть другие вопросы, не стесняй...
+2026-03-01 11:54:08 │ INFO     │ agent.core       │ Сохранение памяти: 4 записей → D:\VSCode\Project\AI AGENT\agent\memory.json
+2026-03-01 11:54:08 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 11:54:08 │ INFO     │ agent.core       │ Запрос обработан, история: 4 записей
+2026-03-01 11:54:08 │ INFO     │ agent.core       │ Сохранение памяти: 4 записей → D:\VSCode\Project\AI AGENT\agent\user_memories\1004724739.json
+2026-03-01 11:54:08 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 11:54:14 │ INFO     │ agent            │ Сообщение от Xeniia_gruzdova (id=1004724739): '5 миллионов?'
+2026-03-01 11:54:15 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 11:54:15 │ INFO     │ agent.core       │ НОВЫЙ ЗАПРОС: '5 миллионов?'
+2026-03-01 11:54:15 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 11:54:15 │ DEBUG    │ agent.core       │ Конвертировано 4 записей истории в messages
+2026-03-01 11:54:15 │ INFO     │ agent.core       │ История чата: 4 сообщений передано модели
+2026-03-01 11:54:15 │ INFO     │ agent.core       │ Отправка запроса в LLM...
+2026-03-01 11:54:28 │ INFO     │ agent.tools      │ ─── TOOL: get_crypto_price(coin='bitcoin', currency='rub') ───
+2026-03-01 11:54:28 │ DEBUG    │ agent.tools      │ CoinGecko HTTP 200
+2026-03-01 11:54:28 │ DEBUG    │ agent.tools      │ CoinGecko ответ: {"bitcoin": {"rub": 5141229}}
+2026-03-01 11:54:28 │ INFO     │ agent.tools      │ get_crypto_price → OK: bitcoin = 5141229 RUB
+2026-03-01 11:54:30 │ INFO     │ agent.core       │ Ответ получен, всего 8 сообщений в цепочке
+2026-03-01 11:54:30 │ DEBUG    │ agent.core       │   [0] HumanMessage
+2026-03-01 11:54:30 │ INFO     │ agent.core       │   [1] AIMessage → Курс биткоина к рублю составляет 5,146,341 RUB.
+2026-03-01 11:54:30 │ DEBUG    │ agent.core       │   [2] HumanMessage
+2026-03-01 11:54:30 │ INFO     │ agent.core       │   [3] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 RUB. Если у вас есть другие вопросы, не стесняйтесь спрашивать!
+2026-03-01 11:54:30 │ DEBUG    │ agent.core       │   [4] HumanMessage
+2026-03-01 11:54:30 │ INFO     │ agent.core       │   [5] AIMessage → вызов инструмента: get_crypto_price({"coin": "bitcoin", "currency": "rub"})
+2026-03-01 11:54:30 │ INFO     │ agent.core       │   [6] ToolMessage (tool=get_crypto_price) → Курс bitcoin: 5141229 RUB
+2026-03-01 11:54:30 │ INFO     │ agent.core       │   [7] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 рублей. Если у вас есть другие вопросы, дайте знать!
+2026-03-01 11:54:30 │ INFO     │ agent.core       │ Финальный ответ (105 символов): Курс биткоина (Bitcoin) к рублю составляет 5,141,229 рублей. Если у вас есть другие вопросы, дайте з...
+2026-03-01 11:54:30 │ INFO     │ agent.core       │ Сохранение памяти: 6 записей → D:\VSCode\Project\AI AGENT\agent\memory.json
+2026-03-01 11:54:30 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 11:54:30 │ INFO     │ agent.core       │ Запрос обработан, история: 6 записей
+2026-03-01 11:54:30 │ INFO     │ agent.core       │ Сохранение памяти: 6 записей → D:\VSCode\Project\AI AGENT\agent\user_memories\1004724739.json
+2026-03-01 11:54:30 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 12:02:48 │ INFO     │ agent            │ ══════════ ЗАПУСК TELEGRAM BOT ══════════
+2026-03-01 12:02:48 │ INFO     │ agent.core       │ Создание агента: модель=gpt-4o-mini
+2026-03-01 12:02:48 │ INFO     │ agent.core       │ LLM инициализирован: gpt-4o-mini, temperature=0.3
+2026-03-01 12:02:48 │ INFO     │ agent.core       │ Регистрация инструментов: get_weather, get_crypto_price, web_search, read_file, write_file, run_terminal_command, http_request, generate_qr_code
+2026-03-01 12:02:48 │ INFO     │ agent.core       │ Агент создан успешно (create_react_agent)
+2026-03-01 12:02:48 │ INFO     │ agent            │ Telegram-бот инициализирован
+2026-03-01 12:02:48 │ INFO     │ agent            │ Запуск polling...
+2026-03-01 12:03:11 │ INFO     │ agent            │ /start от Xeniia_gruzdova (id=1004724739)
+2026-03-01 12:03:20 │ INFO     │ agent            │ /help от user_id=1004724739
+2026-03-01 12:03:50 │ INFO     │ agent            │ Сообщение от Xeniia_gruzdova (id=1004724739): 'Создай QR-код с текстом "Привет, мир!"'
+2026-03-01 12:03:50 │ INFO     │ agent.core       │ Загрузка памяти из D:\VSCode\Project\AI AGENT\agent\user_memories\1004724739.json
+2026-03-01 12:03:50 │ INFO     │ agent.core       │ Загружено 6 записей из памяти
+2026-03-01 12:03:50 │ INFO     │ agent            │ Загружена история для user_id=1004724739 (6 записей)
+2026-03-01 12:03:50 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 12:03:50 │ INFO     │ agent.core       │ НОВЫЙ ЗАПРОС: 'Создай QR-код с текстом "Привет, мир!"'
+2026-03-01 12:03:50 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 12:03:50 │ DEBUG    │ agent.core       │ Конвертировано 6 записей истории в messages
+2026-03-01 12:03:50 │ INFO     │ agent.core       │ История чата: 6 сообщений передано модели
+2026-03-01 12:03:50 │ INFO     │ agent.core       │ Отправка запроса в LLM...
+2026-03-01 12:04:03 │ INFO     │ agent.tools      │ ─── TOOL: generate_qr_code(data='Привет, мир!', filename='') ───
+2026-03-01 12:04:03 │ INFO     │ agent.tools      │ generate_qr_code → OK: D:\VSCode\Project\AI AGENT\agent\qr_codes\qr_Привет__мир_.png
+2026-03-01 12:04:04 │ INFO     │ agent.core       │ Ответ получен, всего 10 сообщений в цепочке
+2026-03-01 12:04:04 │ DEBUG    │ agent.core       │   [0] HumanMessage
+2026-03-01 12:04:04 │ INFO     │ agent.core       │   [1] AIMessage → Курс биткоина к рублю составляет 5,146,341 RUB.
+2026-03-01 12:04:04 │ DEBUG    │ agent.core       │   [2] HumanMessage
+2026-03-01 12:04:04 │ INFO     │ agent.core       │   [3] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 RUB. Если у вас есть другие вопросы, не стесняйтесь спрашивать!
+2026-03-01 12:04:04 │ DEBUG    │ agent.core       │   [4] HumanMessage
+2026-03-01 12:04:04 │ INFO     │ agent.core       │   [5] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 рублей. Если у вас есть другие вопросы, дайте знать!
+2026-03-01 12:04:04 │ DEBUG    │ agent.core       │   [6] HumanMessage
+2026-03-01 12:04:04 │ INFO     │ agent.core       │   [7] AIMessage → вызов инструмента: generate_qr_code({"data": "Привет, мир!"})
+2026-03-01 12:04:04 │ INFO     │ agent.core       │   [8] ToolMessage (tool=generate_qr_code) → QR-код сохранён: D:\VSCode\Project\AI AGENT\agent\qr_codes\qr_Привет__мир_.png
+Содержимое: Привет, мир!
+2026-03-01 12:04:04 │ INFO     │ agent.core       │   [9] AIMessage → QR-код с текстом "Привет, мир!" успешно создан и сохранён. Вы можете скачать его по следующему пути: 
+
+**qr_Привет__мир_.png**
+
+Если вам нужно что-то ещё, дайте знать!
+2026-03-01 12:04:04 │ INFO     │ agent.core       │ Финальный ответ (167 символов): QR-код с текстом "Привет, мир!" успешно создан и сохранён. Вы можете скачать его по следующему пути:...
+2026-03-01 12:04:04 │ INFO     │ agent.core       │ Сохранение памяти: 8 записей → D:\VSCode\Project\AI AGENT\agent\memory.json
+2026-03-01 12:04:04 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 12:04:04 │ INFO     │ agent.core       │ Запрос обработан, история: 8 записей
+2026-03-01 12:04:04 │ INFO     │ agent.core       │ Сохранение памяти: 8 записей → D:\VSCode\Project\AI AGENT\agent\user_memories\1004724739.json
+2026-03-01 12:04:04 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 12:07:39 │ INFO     │ agent            │ Сообщение от Xeniia_gruzdova (id=1004724739): 'Сделай QR-код для Wi-Fi сети MyNetwork с паролем 12345'
+2026-03-01 12:07:39 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 12:07:39 │ INFO     │ agent.core       │ НОВЫЙ ЗАПРОС: 'Сделай QR-код для Wi-Fi сети MyNetwork с паролем 12345'
+2026-03-01 12:07:39 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 12:07:39 │ DEBUG    │ agent.core       │ Конвертировано 8 записей истории в messages
+2026-03-01 12:07:39 │ INFO     │ agent.core       │ История чата: 8 сообщений передано модели
+2026-03-01 12:07:39 │ INFO     │ agent.core       │ Отправка запроса в LLM...
+2026-03-01 12:07:53 │ INFO     │ agent.tools      │ ─── TOOL: generate_qr_code(data='WIFI:S:MyNetwork;T:WPA;P:12345;;', filename='qr_wifi_MyNetwork.png') ───
+2026-03-01 12:07:53 │ INFO     │ agent.tools      │ generate_qr_code → OK: D:\VSCode\Project\AI AGENT\agent\qr_codes\qr_wifi_MyNetwork.png
+2026-03-01 12:07:54 │ INFO     │ agent.core       │ Ответ получен, всего 12 сообщений в цепочке
+2026-03-01 12:07:54 │ DEBUG    │ agent.core       │   [0] HumanMessage
+2026-03-01 12:07:54 │ INFO     │ agent.core       │   [1] AIMessage → Курс биткоина к рублю составляет 5,146,341 RUB.
+2026-03-01 12:07:54 │ DEBUG    │ agent.core       │   [2] HumanMessage
+2026-03-01 12:07:54 │ INFO     │ agent.core       │   [3] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 RUB. Если у вас есть другие вопросы, не стесняйтесь спрашивать!
+2026-03-01 12:07:54 │ DEBUG    │ agent.core       │   [4] HumanMessage
+2026-03-01 12:07:54 │ INFO     │ agent.core       │   [5] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 рублей. Если у вас есть другие вопросы, дайте знать!
+2026-03-01 12:07:54 │ DEBUG    │ agent.core       │   [6] HumanMessage
+2026-03-01 12:07:54 │ INFO     │ agent.core       │   [7] AIMessage → QR-код с текстом "Привет, мир!" успешно создан и сохранён. Вы можете скачать его по следующему пути: 
+
+**qr_Привет__мир_.png**
+
+Если вам нужно что-то ещё, дайте знать!
+2026-03-01 12:07:54 │ DEBUG    │ agent.core       │   [8] HumanMessage
+2026-03-01 12:07:54 │ INFO     │ agent.core       │   [9] AIMessage → вызов инструмента: generate_qr_code({"data": "WIFI:S:MyNetwork;T:WPA;P:12345;;", "filename": "qr_wifi_MyNetwork.png"})
+2026-03-01 12:07:54 │ INFO     │ agent.core       │   [10] ToolMessage (tool=generate_qr_code) → QR-код сохранён: D:\VSCode\Project\AI AGENT\agent\qr_codes\qr_wifi_MyNetwork.png
+Содержимое: WIFI:S:MyNetwork;T:WPA;P:12345;;
+2026-03-01 12:07:54 │ INFO     │ agent.core       │   [11] AIMessage → QR-код для Wi-Fi сети "MyNetwork" с паролем "12345" успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_wifi_MyNetwork.png**
+
+Если у вас есть другие запросы, дайте знать!
+2026-03-01 12:07:54 │ INFO     │ agent.core       │ Финальный ответ (193 символов): QR-код для Wi-Fi сети "MyNetwork" с паролем "12345" успешно создан и сохранён. Вы можете скачать его...
+2026-03-01 12:07:54 │ INFO     │ agent.core       │ Сохранение памяти: 10 записей → D:\VSCode\Project\AI AGENT\agent\memory.json
+2026-03-01 12:07:54 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 12:07:54 │ INFO     │ agent.core       │ Запрос обработан, история: 10 записей
+2026-03-01 12:07:54 │ INFO     │ agent.core       │ Сохранение памяти: 10 записей → D:\VSCode\Project\AI AGENT\agent\user_memories\1004724739.json
+2026-03-01 12:07:54 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 12:12:58 │ INFO     │ agent            │ Сообщение от Xeniia_gruzdova (id=1004724739): 'Сгенерируй QR-код для ссылки https://google.com'
+2026-03-01 12:12:58 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 12:12:58 │ INFO     │ agent.core       │ НОВЫЙ ЗАПРОС: 'Сгенерируй QR-код для ссылки https://google.com'
+2026-03-01 12:12:58 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 12:12:58 │ DEBUG    │ agent.core       │ Конвертировано 10 записей истории в messages
+2026-03-01 12:12:58 │ INFO     │ agent.core       │ История чата: 10 сообщений передано модели
+2026-03-01 12:12:58 │ INFO     │ agent.core       │ Отправка запроса в LLM...
+2026-03-01 12:13:11 │ INFO     │ agent.tools      │ ─── TOOL: generate_qr_code(data='https://google.com', filename='qr_google.png') ───
+2026-03-01 12:13:11 │ INFO     │ agent.tools      │ generate_qr_code → OK: D:\VSCode\Project\AI AGENT\agent\qr_codes\qr_google.png
+2026-03-01 12:13:13 │ INFO     │ agent.core       │ Ответ получен, всего 14 сообщений в цепочке
+2026-03-01 12:13:13 │ DEBUG    │ agent.core       │   [0] HumanMessage
+2026-03-01 12:13:13 │ INFO     │ agent.core       │   [1] AIMessage → Курс биткоина к рублю составляет 5,146,341 RUB.
+2026-03-01 12:13:13 │ DEBUG    │ agent.core       │   [2] HumanMessage
+2026-03-01 12:13:13 │ INFO     │ agent.core       │   [3] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 RUB. Если у вас есть другие вопросы, не стесняйтесь спрашивать!
+2026-03-01 12:13:13 │ DEBUG    │ agent.core       │   [4] HumanMessage
+2026-03-01 12:13:13 │ INFO     │ agent.core       │   [5] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 рублей. Если у вас есть другие вопросы, дайте знать!
+2026-03-01 12:13:13 │ DEBUG    │ agent.core       │   [6] HumanMessage
+2026-03-01 12:13:13 │ INFO     │ agent.core       │   [7] AIMessage → QR-код с текстом "Привет, мир!" успешно создан и сохранён. Вы можете скачать его по следующему пути: 
+
+**qr_Привет__мир_.png**
+
+Если вам нужно что-то ещё, дайте знать!
+2026-03-01 12:13:13 │ DEBUG    │ agent.core       │   [8] HumanMessage
+2026-03-01 12:13:13 │ INFO     │ agent.core       │   [9] AIMessage → QR-код для Wi-Fi сети "MyNetwork" с паролем "12345" успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_wifi_MyNetwork.png**
+
+Если у вас есть другие запросы, дайте знать!
+2026-03-01 12:13:13 │ DEBUG    │ agent.core       │   [10] HumanMessage
+2026-03-01 12:13:13 │ INFO     │ agent.core       │   [11] AIMessage → вызов инструмента: generate_qr_code({"data": "https://google.com", "filename": "qr_google.png"})
+2026-03-01 12:13:13 │ INFO     │ agent.core       │   [12] ToolMessage (tool=generate_qr_code) → QR-код сохранён: D:\VSCode\Project\AI AGENT\agent\qr_codes\qr_google.png
+Содержимое: https://google.com
+2026-03-01 12:13:13 │ INFO     │ agent.core       │   [13] AIMessage → QR-код для ссылки [https://google.com](https://google.com) успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_google.png**
+
+Если у вас есть другие запросы, дайте знать!
+2026-03-01 12:13:13 │ INFO     │ agent.core       │ Финальный ответ (192 символов): QR-код для ссылки [https://google.com](https://google.com) успешно создан и сохранён. Вы можете скач...
+2026-03-01 12:13:13 │ INFO     │ agent.core       │ Сохранение памяти: 12 записей → D:\VSCode\Project\AI AGENT\agent\memory.json
+2026-03-01 12:13:13 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 12:13:13 │ INFO     │ agent.core       │ Запрос обработан, история: 12 записей
+2026-03-01 12:13:13 │ INFO     │ agent.core       │ Сохранение памяти: 12 записей → D:\VSCode\Project\AI AGENT\agent\user_memories\1004724739.json
+2026-03-01 12:13:13 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 12:14:19 │ INFO     │ agent            │ Сообщение от Xeniia_gruzdova (id=1004724739): 'Сгенерируй QR-код для ссылки university.zerocoder.ru'
+2026-03-01 12:14:19 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 12:14:19 │ INFO     │ agent.core       │ НОВЫЙ ЗАПРОС: 'Сгенерируй QR-код для ссылки university.zerocoder.ru'
+2026-03-01 12:14:19 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 12:14:19 │ DEBUG    │ agent.core       │ Конвертировано 12 записей истории в messages
+2026-03-01 12:14:19 │ INFO     │ agent.core       │ История чата: 12 сообщений передано модели
+2026-03-01 12:14:19 │ INFO     │ agent.core       │ Отправка запроса в LLM...
+2026-03-01 12:14:32 │ INFO     │ agent.tools      │ ─── TOOL: generate_qr_code(data='https://university.zerocoder.ru', filename='qr_university.png') ───
+2026-03-01 12:14:32 │ INFO     │ agent.tools      │ generate_qr_code → OK: D:\VSCode\Project\AI AGENT\agent\qr_codes\qr_university.png
+2026-03-01 12:14:33 │ INFO     │ agent.core       │ Ответ получен, всего 16 сообщений в цепочке
+2026-03-01 12:14:33 │ DEBUG    │ agent.core       │   [0] HumanMessage
+2026-03-01 12:14:33 │ INFO     │ agent.core       │   [1] AIMessage → Курс биткоина к рублю составляет 5,146,341 RUB.
+2026-03-01 12:14:33 │ DEBUG    │ agent.core       │   [2] HumanMessage
+2026-03-01 12:14:33 │ INFO     │ agent.core       │   [3] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 RUB. Если у вас есть другие вопросы, не стесняйтесь спрашивать!
+2026-03-01 12:14:33 │ DEBUG    │ agent.core       │   [4] HumanMessage
+2026-03-01 12:14:33 │ INFO     │ agent.core       │   [5] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 рублей. Если у вас есть другие вопросы, дайте знать!
+2026-03-01 12:14:33 │ DEBUG    │ agent.core       │   [6] HumanMessage
+2026-03-01 12:14:33 │ INFO     │ agent.core       │   [7] AIMessage → QR-код с текстом "Привет, мир!" успешно создан и сохранён. Вы можете скачать его по следующему пути: 
+
+**qr_Привет__мир_.png**
+
+Если вам нужно что-то ещё, дайте знать!
+2026-03-01 12:14:33 │ DEBUG    │ agent.core       │   [8] HumanMessage
+2026-03-01 12:14:33 │ INFO     │ agent.core       │   [9] AIMessage → QR-код для Wi-Fi сети "MyNetwork" с паролем "12345" успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_wifi_MyNetwork.png**
+
+Если у вас есть другие запросы, дайте знать!
+2026-03-01 12:14:33 │ DEBUG    │ agent.core       │   [10] HumanMessage
+2026-03-01 12:14:33 │ INFO     │ agent.core       │   [11] AIMessage → QR-код для ссылки [https://google.com](https://google.com) успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_google.png**
+
+Если у вас есть другие запросы, дайте знать!
+2026-03-01 12:14:33 │ DEBUG    │ agent.core       │   [12] HumanMessage
+2026-03-01 12:14:33 │ INFO     │ agent.core       │   [13] AIMessage → вызов инструмента: generate_qr_code({"data": "https://university.zerocoder.ru", "filename": "qr_university.png"})
+2026-03-01 12:14:33 │ INFO     │ agent.core       │   [14] ToolMessage (tool=generate_qr_code) → QR-код сохранён: D:\VSCode\Project\AI AGENT\agent\qr_codes\qr_university.png
+Содержимое: https://university.zerocoder.ru
+2026-03-01 12:14:33 │ INFO     │ agent.core       │   [15] AIMessage → QR-код для ссылки [https://university.zerocoder.ru](https://university.zerocoder.ru) успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_university.png**
+
+Если у вас есть другие
+2026-03-01 12:14:33 │ INFO     │ agent.core       │ Финальный ответ (222 символов): QR-код для ссылки [https://university.zerocoder.ru](https://university.zerocoder.ru) успешно создан ...
+2026-03-01 12:14:33 │ INFO     │ agent.core       │ Сохранение памяти: 14 записей → D:\VSCode\Project\AI AGENT\agent\memory.json
+2026-03-01 12:14:33 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 12:14:33 │ INFO     │ agent.core       │ Запрос обработан, история: 14 записей
+2026-03-01 12:14:33 │ INFO     │ agent.core       │ Сохранение памяти: 14 записей → D:\VSCode\Project\AI AGENT\agent\user_memories\1004724739.json
+2026-03-01 12:14:33 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 12:20:25 │ INFO     │ agent            │ ══════════ ЗАПУСК TELEGRAM BOT ══════════
+2026-03-01 12:20:25 │ INFO     │ agent.core       │ Создание агента: модель=gpt-4o-mini
+2026-03-01 12:20:26 │ INFO     │ agent.core       │ LLM инициализирован: gpt-4o-mini, temperature=0.3
+2026-03-01 12:20:26 │ INFO     │ agent.core       │ Регистрация инструментов: get_weather, get_crypto_price, web_search, read_file, write_file, run_terminal_command, http_request, get_currency_rate, generate_qr_code
+2026-03-01 12:20:26 │ INFO     │ agent.core       │ Агент создан успешно (create_react_agent)
+2026-03-01 12:20:26 │ INFO     │ agent            │ Telegram-бот инициализирован
+2026-03-01 12:20:26 │ INFO     │ agent            │ Запуск polling...
+2026-03-01 12:20:39 │ INFO     │ agent            │ /start от Xeniia_gruzdova (id=1004724739)
+2026-03-01 12:20:44 │ INFO     │ agent            │ /help от user_id=1004724739
+2026-03-01 12:21:17 │ INFO     │ agent            │ /help от user_id=1004724739
+2026-03-01 12:21:52 │ INFO     │ agent            │ Сообщение от Xeniia_gruzdova (id=1004724739): 'курс доллара к рублю'
+2026-03-01 12:21:53 │ INFO     │ agent.core       │ Загрузка памяти из D:\VSCode\Project\AI AGENT\agent\user_memories\1004724739.json
+2026-03-01 12:21:53 │ INFO     │ agent.core       │ Загружено 14 записей из памяти
+2026-03-01 12:21:53 │ INFO     │ agent            │ Загружена история для user_id=1004724739 (14 записей)
+2026-03-01 12:21:53 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 12:21:53 │ INFO     │ agent.core       │ НОВЫЙ ЗАПРОС: 'курс доллара к рублю'
+2026-03-01 12:21:53 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 12:21:53 │ DEBUG    │ agent.core       │ Конвертировано 14 записей истории в messages
+2026-03-01 12:21:53 │ INFO     │ agent.core       │ История чата: 14 сообщений передано модели
+2026-03-01 12:21:53 │ INFO     │ agent.core       │ Отправка запроса в LLM...
+2026-03-01 12:22:06 │ INFO     │ agent.tools      │ ─── TOOL: get_currency_rate(base='USD', targets='RUB') ───
+2026-03-01 12:22:07 │ DEBUG    │ agent.tools      │ Frankfurter HTTP 404
+2026-03-01 12:22:07 │ ERROR    │ agent.tools      │ get_currency_rate → ОШИБКА: 404 Client Error: Not Found for url: https://api.frankfurter.dev/v1/latest?base=USD&symbols=RUB
+Traceback (most recent call last):
+  File "D:\VSCode\Project\AI AGENT\agent\tools.py", line 266, in get_currency_rate
+    resp.raise_for_status()
+  File "D:\VSCode\Project\AI AGENT\agent\venv\Lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.frankfurter.dev/v1/latest?base=USD&symbols=RUB
+2026-03-01 12:22:09 │ INFO     │ agent.tools      │ ─── TOOL: get_currency_rate(base='USD', targets='RUB') ───
+2026-03-01 12:22:09 │ DEBUG    │ agent.tools      │ Frankfurter HTTP 404
+2026-03-01 12:22:09 │ ERROR    │ agent.tools      │ get_currency_rate → ОШИБКА: 404 Client Error: Not Found for url: https://api.frankfurter.dev/v1/latest?base=USD&symbols=RUB
+Traceback (most recent call last):
+  File "D:\VSCode\Project\AI AGENT\agent\tools.py", line 266, in get_currency_rate
+    resp.raise_for_status()
+  File "D:\VSCode\Project\AI AGENT\agent\venv\Lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.frankfurter.dev/v1/latest?base=USD&symbols=RUB
+2026-03-01 12:22:12 │ INFO     │ agent.core       │ Ответ получен, всего 20 сообщений в цепочке
+2026-03-01 12:22:12 │ DEBUG    │ agent.core       │   [0] HumanMessage
+2026-03-01 12:22:12 │ INFO     │ agent.core       │   [1] AIMessage → Курс биткоина к рублю составляет 5,146,341 RUB.
+2026-03-01 12:22:12 │ DEBUG    │ agent.core       │   [2] HumanMessage
+2026-03-01 12:22:12 │ INFO     │ agent.core       │   [3] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 RUB. Если у вас есть другие вопросы, не стесняйтесь спрашивать!
+2026-03-01 12:22:12 │ DEBUG    │ agent.core       │   [4] HumanMessage
+2026-03-01 12:22:12 │ INFO     │ agent.core       │   [5] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 рублей. Если у вас есть другие вопросы, дайте знать!
+2026-03-01 12:22:12 │ DEBUG    │ agent.core       │   [6] HumanMessage
+2026-03-01 12:22:12 │ INFO     │ agent.core       │   [7] AIMessage → QR-код с текстом "Привет, мир!" успешно создан и сохранён. Вы можете скачать его по следующему пути: 
+
+**qr_Привет__мир_.png**
+
+Если вам нужно что-то ещё, дайте знать!
+2026-03-01 12:22:12 │ DEBUG    │ agent.core       │   [8] HumanMessage
+2026-03-01 12:22:12 │ INFO     │ agent.core       │   [9] AIMessage → QR-код для Wi-Fi сети "MyNetwork" с паролем "12345" успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_wifi_MyNetwork.png**
+
+Если у вас есть другие запросы, дайте знать!
+2026-03-01 12:22:12 │ DEBUG    │ agent.core       │   [10] HumanMessage
+2026-03-01 12:22:12 │ INFO     │ agent.core       │   [11] AIMessage → QR-код для ссылки [https://google.com](https://google.com) успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_google.png**
+
+Если у вас есть другие запросы, дайте знать!
+2026-03-01 12:22:12 │ DEBUG    │ agent.core       │   [12] HumanMessage
+2026-03-01 12:22:12 │ INFO     │ agent.core       │   [13] AIMessage → QR-код для ссылки [https://university.zerocoder.ru](https://university.zerocoder.ru) успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_university.png**
+
+Если у вас есть другие
+2026-03-01 12:22:12 │ DEBUG    │ agent.core       │   [14] HumanMessage
+2026-03-01 12:22:12 │ INFO     │ agent.core       │   [15] AIMessage → вызов инструмента: get_currency_rate({"base": "USD", "targets": "RUB"})
+2026-03-01 12:22:12 │ INFO     │ agent.core       │   [16] ToolMessage (tool=get_currency_rate) → Ошибка при получении курса валют: 404 Client Error: Not Found for url: https://api.frankfurter.dev/v1/latest?base=USD&symbols=RUB
+2026-03-01 12:22:12 │ INFO     │ agent.core       │   [17] AIMessage → вызов инструмента: get_currency_rate({"base": "USD", "targets": "RUB"})
+2026-03-01 12:22:12 │ INFO     │ agent.core       │   [18] ToolMessage (tool=get_currency_rate) → Ошибка при получении курса валют: 404 Client Error: Not Found for url: https://api.frankfurter.dev/v1/latest?base=USD&symbols=RUB
+2026-03-01 12:22:12 │ INFO     │ agent.core       │   [19] AIMessage → К сожалению, я не смог получить курс доллара к рублю из-за ошибки в запросе. 
+
+Если вам нужно, я могу попытаться найти эту информацию в интернете. Хотите, чтобы я это сделал?
+2026-03-01 12:22:12 │ INFO     │ agent.core       │ Финальный ответ (174 символов): К сожалению, я не смог получить курс доллара к рублю из-за ошибки в запросе. 
+
+Если вам нужно, я мог...
+2026-03-01 12:22:12 │ INFO     │ agent.core       │ Сохранение памяти: 16 записей → D:\VSCode\Project\AI AGENT\agent\memory.json
+2026-03-01 12:22:12 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 12:22:12 │ INFO     │ agent.core       │ Запрос обработан, история: 16 записей
+2026-03-01 12:22:12 │ INFO     │ agent.core       │ Сохранение памяти: 16 записей → D:\VSCode\Project\AI AGENT\agent\user_memories\1004724739.json
+2026-03-01 12:22:12 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 12:24:45 │ INFO     │ agent            │ ══════════ ЗАПУСК TELEGRAM BOT ══════════
+2026-03-01 12:24:45 │ INFO     │ agent.core       │ Создание агента: модель=gpt-4o-mini
+2026-03-01 12:24:46 │ INFO     │ agent.core       │ LLM инициализирован: gpt-4o-mini, temperature=0.3
+2026-03-01 12:24:46 │ INFO     │ agent.core       │ Регистрация инструментов: get_weather, get_crypto_price, web_search, read_file, write_file, run_terminal_command, http_request, get_currency_rate, generate_qr_code
+2026-03-01 12:24:46 │ INFO     │ agent.core       │ Агент создан успешно (create_react_agent)
+2026-03-01 12:24:46 │ INFO     │ agent            │ Telegram-бот инициализирован
+2026-03-01 12:24:46 │ INFO     │ agent            │ Запуск polling...
+2026-03-01 12:24:59 │ INFO     │ agent            │ /start от Xeniia_gruzdova (id=1004724739)
+2026-03-01 12:25:03 │ INFO     │ agent            │ Сообщение от Xeniia_gruzdova (id=1004724739): 'курс доллара к рублю'
+2026-03-01 12:25:03 │ INFO     │ agent.core       │ Загрузка памяти из D:\VSCode\Project\AI AGENT\agent\user_memories\1004724739.json
+2026-03-01 12:25:03 │ INFO     │ agent.core       │ Загружено 16 записей из памяти
+2026-03-01 12:25:03 │ INFO     │ agent            │ Загружена история для user_id=1004724739 (16 записей)
+2026-03-01 12:25:03 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 12:25:03 │ INFO     │ agent.core       │ НОВЫЙ ЗАПРОС: 'курс доллара к рублю'
+2026-03-01 12:25:03 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 12:25:03 │ DEBUG    │ agent.core       │ Конвертировано 16 записей истории в messages
+2026-03-01 12:25:03 │ INFO     │ agent.core       │ История чата: 16 сообщений передано модели
+2026-03-01 12:25:03 │ INFO     │ agent.core       │ Отправка запроса в LLM...
+2026-03-01 12:25:16 │ INFO     │ agent.tools      │ ─── TOOL: get_currency_rate(base='USD', targets='RUB') ───
+2026-03-01 12:25:17 │ DEBUG    │ agent.tools      │ ExchangeRate API HTTP 200
+2026-03-01 12:25:17 │ DEBUG    │ agent.tools      │ ExchangeRate API: получено 166 курсов
+2026-03-01 12:25:17 │ INFO     │ agent.tools      │ get_currency_rate → OK: 1 курсов
+2026-03-01 12:25:18 │ INFO     │ agent.core       │ Ответ получен, всего 20 сообщений в цепочке
+2026-03-01 12:25:18 │ DEBUG    │ agent.core       │   [0] HumanMessage
+2026-03-01 12:25:18 │ INFO     │ agent.core       │   [1] AIMessage → Курс биткоина к рублю составляет 5,146,341 RUB.
+2026-03-01 12:25:18 │ DEBUG    │ agent.core       │   [2] HumanMessage
+2026-03-01 12:25:18 │ INFO     │ agent.core       │   [3] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 RUB. Если у вас есть другие вопросы, не стесняйтесь спрашивать!
+2026-03-01 12:25:18 │ DEBUG    │ agent.core       │   [4] HumanMessage
+2026-03-01 12:25:18 │ INFO     │ agent.core       │   [5] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 рублей. Если у вас есть другие вопросы, дайте знать!
+2026-03-01 12:25:18 │ DEBUG    │ agent.core       │   [6] HumanMessage
+2026-03-01 12:25:18 │ INFO     │ agent.core       │   [7] AIMessage → QR-код с текстом "Привет, мир!" успешно создан и сохранён. Вы можете скачать его по следующему пути: 
+
+**qr_Привет__мир_.png**
+
+Если вам нужно что-то ещё, дайте знать!
+2026-03-01 12:25:18 │ DEBUG    │ agent.core       │   [8] HumanMessage
+2026-03-01 12:25:18 │ INFO     │ agent.core       │   [9] AIMessage → QR-код для Wi-Fi сети "MyNetwork" с паролем "12345" успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_wifi_MyNetwork.png**
+
+Если у вас есть другие запросы, дайте знать!
+2026-03-01 12:25:18 │ DEBUG    │ agent.core       │   [10] HumanMessage
+2026-03-01 12:25:18 │ INFO     │ agent.core       │   [11] AIMessage → QR-код для ссылки [https://google.com](https://google.com) успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_google.png**
+
+Если у вас есть другие запросы, дайте знать!
+2026-03-01 12:25:18 │ DEBUG    │ agent.core       │   [12] HumanMessage
+2026-03-01 12:25:18 │ INFO     │ agent.core       │   [13] AIMessage → QR-код для ссылки [https://university.zerocoder.ru](https://university.zerocoder.ru) успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_university.png**
+
+Если у вас есть другие
+2026-03-01 12:25:18 │ DEBUG    │ agent.core       │   [14] HumanMessage
+2026-03-01 12:25:18 │ INFO     │ agent.core       │   [15] AIMessage → К сожалению, я не смог получить курс доллара к рублю из-за ошибки в запросе. 
+
+Если вам нужно, я могу попытаться найти эту информацию в интернете. Хотите, чтобы я это сделал?
+2026-03-01 12:25:18 │ DEBUG    │ agent.core       │   [16] HumanMessage
+2026-03-01 12:25:18 │ INFO     │ agent.core       │   [17] AIMessage → вызов инструмента: get_currency_rate({"base": "USD", "targets": "RUB"})
+2026-03-01 12:25:18 │ INFO     │ agent.core       │   [18] ToolMessage (tool=get_currency_rate) → Курсы Доллар США (USD) на Sun, 01 Mar 2026:
+  1 USD = 77.00535 RUB (Российский рубль)
+2026-03-01 12:25:18 │ INFO     │ agent.core       │   [19] AIMessage → Курс доллара США (USD) к рублю (RUB) составляет 77.01 RUB за 1 USD. Если у вас есть другие вопросы, дайте знать!
+2026-03-01 12:25:18 │ INFO     │ agent.core       │ Финальный ответ (112 символов): Курс доллара США (USD) к рублю (RUB) составляет 77.01 RUB за 1 USD. Если у вас есть другие вопросы, ...
+2026-03-01 12:25:18 │ INFO     │ agent.core       │ Сохранение памяти: 18 записей → D:\VSCode\Project\AI AGENT\agent\memory.json
+2026-03-01 12:25:18 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 12:25:18 │ INFO     │ agent.core       │ Запрос обработан, история: 18 записей
+2026-03-01 12:25:18 │ INFO     │ agent.core       │ Сохранение памяти: 18 записей → D:\VSCode\Project\AI AGENT\agent\user_memories\1004724739.json
+2026-03-01 12:25:18 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 12:25:41 │ INFO     │ agent            │ Сообщение от Xeniia_gruzdova (id=1004724739): 'курс рубля к тенге'
+2026-03-01 12:25:42 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 12:25:42 │ INFO     │ agent.core       │ НОВЫЙ ЗАПРОС: 'курс рубля к тенге'
+2026-03-01 12:25:42 │ INFO     │ agent.core       │ ════════════════════════════════════════
+2026-03-01 12:25:42 │ DEBUG    │ agent.core       │ Конвертировано 18 записей истории в messages
+2026-03-01 12:25:42 │ INFO     │ agent.core       │ История чата: 18 сообщений передано модели
+2026-03-01 12:25:42 │ INFO     │ agent.core       │ Отправка запроса в LLM...
+2026-03-01 12:25:44 │ INFO     │ agent.tools      │ ─── TOOL: get_currency_rate(base='RUB', targets='KZT') ───
+2026-03-01 12:25:44 │ DEBUG    │ agent.tools      │ ExchangeRate API HTTP 200
+2026-03-01 12:25:44 │ DEBUG    │ agent.tools      │ ExchangeRate API: получено 166 курсов
+2026-03-01 12:25:44 │ INFO     │ agent.tools      │ get_currency_rate → OK: 1 курсов
+2026-03-01 12:25:46 │ INFO     │ agent.core       │ Ответ получен, всего 22 сообщений в цепочке
+2026-03-01 12:25:46 │ DEBUG    │ agent.core       │   [0] HumanMessage
+2026-03-01 12:25:46 │ INFO     │ agent.core       │   [1] AIMessage → Курс биткоина к рублю составляет 5,146,341 RUB.
+2026-03-01 12:25:46 │ DEBUG    │ agent.core       │   [2] HumanMessage
+2026-03-01 12:25:46 │ INFO     │ agent.core       │   [3] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 RUB. Если у вас есть другие вопросы, не стесняйтесь спрашивать!
+2026-03-01 12:25:46 │ DEBUG    │ agent.core       │   [4] HumanMessage
+2026-03-01 12:25:46 │ INFO     │ agent.core       │   [5] AIMessage → Курс биткоина (Bitcoin) к рублю составляет 5,141,229 рублей. Если у вас есть другие вопросы, дайте знать!
+2026-03-01 12:25:46 │ DEBUG    │ agent.core       │   [6] HumanMessage
+2026-03-01 12:25:46 │ INFO     │ agent.core       │   [7] AIMessage → QR-код с текстом "Привет, мир!" успешно создан и сохранён. Вы можете скачать его по следующему пути: 
+
+**qr_Привет__мир_.png**
+
+Если вам нужно что-то ещё, дайте знать!
+2026-03-01 12:25:46 │ DEBUG    │ agent.core       │   [8] HumanMessage
+2026-03-01 12:25:46 │ INFO     │ agent.core       │   [9] AIMessage → QR-код для Wi-Fi сети "MyNetwork" с паролем "12345" успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_wifi_MyNetwork.png**
+
+Если у вас есть другие запросы, дайте знать!
+2026-03-01 12:25:46 │ DEBUG    │ agent.core       │   [10] HumanMessage
+2026-03-01 12:25:46 │ INFO     │ agent.core       │   [11] AIMessage → QR-код для ссылки [https://google.com](https://google.com) успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_google.png**
+
+Если у вас есть другие запросы, дайте знать!
+2026-03-01 12:25:46 │ DEBUG    │ agent.core       │   [12] HumanMessage
+2026-03-01 12:25:46 │ INFO     │ agent.core       │   [13] AIMessage → QR-код для ссылки [https://university.zerocoder.ru](https://university.zerocoder.ru) успешно создан и сохранён. Вы можете скачать его по следующему пути:
+
+**qr_university.png**
+
+Если у вас есть другие
+2026-03-01 12:25:46 │ DEBUG    │ agent.core       │   [14] HumanMessage
+2026-03-01 12:25:46 │ INFO     │ agent.core       │   [15] AIMessage → К сожалению, я не смог получить курс доллара к рублю из-за ошибки в запросе. 
+
+Если вам нужно, я могу попытаться найти эту информацию в интернете. Хотите, чтобы я это сделал?
+2026-03-01 12:25:46 │ DEBUG    │ agent.core       │   [16] HumanMessage
+2026-03-01 12:25:46 │ INFO     │ agent.core       │   [17] AIMessage → Курс доллара США (USD) к рублю (RUB) составляет 77.01 RUB за 1 USD. Если у вас есть другие вопросы, дайте знать!
+2026-03-01 12:25:46 │ DEBUG    │ agent.core       │   [18] HumanMessage
+2026-03-01 12:25:46 │ INFO     │ agent.core       │   [19] AIMessage → вызов инструмента: get_currency_rate({"base": "RUB", "targets": "KZT"})
+2026-03-01 12:25:46 │ INFO     │ agent.core       │   [20] ToolMessage (tool=get_currency_rate) → Курсы Российский рубль (RUB) на Sun, 01 Mar 2026:
+  1 RUB = 6.492905 KZT (Казахстанский тенге)
+2026-03-01 12:25:46 │ INFO     │ agent.core       │   [21] AIMessage → Курс рубля (RUB) к тенге (KZT) составляет 1 RUB = 6.49 KZT. Если у вас есть другие вопросы, дайте знать!
+2026-03-01 12:25:46 │ INFO     │ agent.core       │ Финальный ответ (104 символов): Курс рубля (RUB) к тенге (KZT) составляет 1 RUB = 6.49 KZT. Если у вас есть другие вопросы, дайте зн...
+2026-03-01 12:25:46 │ INFO     │ agent.core       │ Сохранение памяти: 20 записей → D:\VSCode\Project\AI AGENT\agent\memory.json
+2026-03-01 12:25:46 │ DEBUG    │ agent.core       │ Память сохранена успешно
+2026-03-01 12:25:46 │ INFO     │ agent.core       │ Запрос обработан, история: 20 записей
+2026-03-01 12:25:46 │ INFO     │ agent.core       │ Сохранение памяти: 20 записей → D:\VSCode\Project\AI AGENT\agent\user_memories\1004724739.json
+2026-03-01 12:25:46 │ DEBUG    │ agent.core       │ Память сохранена успешно

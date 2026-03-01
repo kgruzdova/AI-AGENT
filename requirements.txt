@@ -1,0 +1,10 @@
+openai>=1.0
+langchain>=0.3
+langchain-openai>=0.3
+langchain-core>=0.3
+duckduckgo-search>=7.0
+requests>=2.31
+python-dotenv>=1.0
+colorama>=0.4.6
+pyTelegramBotAPI>=4.20
+qrcode[pil]>=8.0
